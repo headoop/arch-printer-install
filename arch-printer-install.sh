@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # use sudo /usr/sbin/lpinfo -v to see list of devices
 # device
