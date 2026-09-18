@@ -1,4 +1,4 @@
-# Maintainer: schulle <cschult@devmem.de>
+# Maintainer: headoop <12900332+headoop@users.noreply.github.com>
 pkgname=brother-dcpj774dw
 PKGEXT='.pkg.tar.gz'
 pkgver=1.0.5
