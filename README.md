@@ -20,7 +20,23 @@ the system default destination.
 ## Requirements
 
 - `cups`, with `cups.service` running
-- `brother-dcpj774dw` (AUR) — provides the PPD
+- `base-devel`, to build the driver package below
+
+## Driver package
+
+The `PKGBUILD` in this repository repackages Brother's official `.rpm` as an
+Arch package and applies `fix_lp.patch`, which makes the spool directory
+root-owned instead of `lp`. Build and install it from the repository root:
+
+```sh
+makepkg -si
+```
+
+`-s` pulls the build dependency `rpmextract`, `-i` hands the finished package to
+`pacman`. The package itself only ships `/opt/brother`; its `post_install` hook
+runs Brother's `cupswrapper` script, and that is what places the PPD at
+`/usr/share/ppd/Brother/brother_dcpj774dw_printer_en.ppd` — the path
+`arch-printer-install.sh` expects in `model`.
 
 ## Usage
 
