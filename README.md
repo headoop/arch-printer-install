@@ -24,11 +24,13 @@ the system default destination.
 
 ## Driver package
 
-The `PKGBUILD` in this repository repackages Brother's official `.rpm` as an
-Arch package and applies `fix_lp.patch`, which makes the spool directory
-root-owned instead of `lp`. Build and install it from the repository root:
+The `DCP-J774DW/` directory holds the driver package: its `PKGBUILD` repackages
+Brother's official `.rpm` as an Arch package and applies `fix_lp.patch`, which
+makes the spool directory root-owned instead of `lp`. Build and install it from
+that directory:
 
 ```sh
+cd DCP-J774DW
 makepkg -si
 ```
 
